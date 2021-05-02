@@ -1,16 +1,14 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class CreateNewFile {
 
-    public void createNewFile() throws IOException {
-        Scanner scanner = new Scanner(System.in);
+    public void createNewFile(String name) throws IOException {
         Menu menu = new Menu();
 
         //Siin on faili asukoht
 
-        File file = new File("Text.txt");
+        File file = new File(name);
         boolean result;
 
         try {
@@ -23,20 +21,7 @@ public class CreateNewFile {
         } catch (IOException e) {
             System.out.println("CreateNewFile file creator ERROR");
         }
-        System.out.println("Do you want create again (y/n)");
-        String answer = scanner.nextLine();
-
-        //j4tkamiseks vajalik valik
-        switch (answer) {
-            case "y":
-            case "Y":
-                createNewFile();
-            case "n":
-            case "N":
-                menu.menu();
-            default:
-                createNewFile();
-        }
+        menu.menu();
     }
 }
 

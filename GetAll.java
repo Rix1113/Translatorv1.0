@@ -3,12 +3,12 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class GetAll {
-    public void oneWord() throws IOException {
+    public void getAllWords(String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
         Menu menu = new Menu();
 
         //Siin on faili asukoht
-        String filePath = "Text.txt";
+        String filePath = name;
         HashMap<String, String> map = new HashMap<>();
 
         String line;

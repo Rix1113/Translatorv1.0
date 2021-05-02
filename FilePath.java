@@ -1,24 +1,17 @@
 import java.util.Scanner;
 
 public class FilePath {
-    String fileName;
+    private String userInputPathName;
 
-    public FilePath() {
-        this.fileName = fileName;
+    public FilePath(String userInputPathName) {
+        this.userInputPathName = userInputPathName;
     }
 
-    public String getFileName() {
-        return fileName;
+    public String getUserInputPathName() {
+        return userInputPathName;
     }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
-    public void filePath() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter file path: ");
-        this.fileName = sc.nextLine();
+    public void setUserInputPathName(String userInputPathName) {
+        this.userInputPathName = userInputPathName;
     }
 }
-/* See tahab uuesti kirjutamist */

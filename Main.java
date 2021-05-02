@@ -8,6 +8,8 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             CreateNewFile createNewFile = new CreateNewFile();
             Menu menu = new Menu();
+            String userInputPathName = null;
+
 
 
             System.out.println("Do you want create new file (y/n)?\n");
@@ -16,14 +18,18 @@ public class Main {
             switch (answer) {
                 case "y":
                 case "Y":
+                    System.out.println("Choose file name (Filename.txt)");
+                    userInputPathName = sc.nextLine();
+                    FilePath filePath = new FilePath(userInputPathName);
+                    filePath.getUserInputPathName();
 
-                    createNewFile.createNewFile();
+                    createNewFile.createNewFile(userInputPathName);
 
                 case "n":
                 case "N":
-                    menu.menu();
+                    FileChoose.fileChoose();
                 default:
-                    createNewFile.createNewFile();
+                    createNewFile.createNewFile(userInputPathName);
             }
         }
     }

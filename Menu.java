@@ -33,7 +33,7 @@ public class Menu {
         } else if (ans.equals("2")) {
             gA.getOne();
         } else if (ans.equals("3")) {
-            oW.oneWord();
+            oW.getAllWords("name");
         } else if (ans.equals("4")) {
             System.out.println("Closing program");
             System.exit(0);
