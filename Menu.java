@@ -7,26 +7,10 @@ public class Menu {
 
     static GetAll oW = new GetAll();
     static GetOne gA = new GetOne();
-    static CreateNewFile cF = new CreateNewFile();
+    static Main main = new Main();
 
     //Siin on eelvalik, kas tahad uut faili teha v6i mitte
-    public static void newFile() throws IOException {
-        System.out.println("Do you want create new file (y/n)?\n");
-        String answer = sc.nextLine();
 
-        switch (answer) {
-            case "y":
-            case "Y":
-
-                cF.createNewFile();
-                menu();
-
-            case "n":
-            case "N":
-                menu();
-
-        }
-    }
 
 
     //P6himenyy
@@ -40,11 +24,9 @@ public class Menu {
         System.out.println("1 -- Insert new translation \n" +
                 "2 -- Translate word\n" +
                 "3 -- Get all words\n" +
-                "4 -- Create new file\n" +
-                "5 -- Quit");
+                "4 -- Quit");
 
         String ans = sc.nextLine();
-
 
         if (ans.equals("1")) {
             Mapping.mapping();
@@ -53,8 +35,6 @@ public class Menu {
         } else if (ans.equals("3")) {
             oW.oneWord();
         } else if (ans.equals("4")) {
-            newFile();
-        } else if (ans.equals("5")) {
             System.out.println("Closing program");
             System.exit(0);
         } else {

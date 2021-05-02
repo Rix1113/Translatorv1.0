@@ -31,17 +31,12 @@ public class GetAll {
         reader.close();
 
 // j4tkamiseks vajalik tegevus
-        System.out.println("\nReturn main menu (press y and Enter)");
+        System.out.println("\nReturn main menu (press any key)");
         String answer = scanner.nextLine();
 
         switch (answer) {
-            case "y":
-            case "Y":
-                menu.menu();
             default:
-                System.out.println("Press y");
                 menu.menu();
         }
     }
-
 }

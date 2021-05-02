@@ -6,6 +6,7 @@ public class FileList {
 
     //Toob v4lja kaustas olevad failid
 
+
     List<String> textFiles(String directory) {
         List<String> textFiles = new ArrayList<>();
         File dir = new File(directory);

@@ -33,38 +33,37 @@ public class Mapping {
                 System.out.println("Word in english: " + eng + " is "
                         + oldVal + " and has been overwritten by " + est);
             }
+            try {
+                bf = new BufferedWriter(new FileWriter(file, true));
+                for (Map.Entry<String, String> entry : translatorMap.entrySet()) {
+                    bf.write(entry.getKey() + " - " + entry.getValue());
+                    bf.newLine();
+                }
+                bf.flush();
+            } catch (IOException e) {
+                System.out.println("BufferWriter block ERROR");
+            } finally {
                 try {
-                    bf = new BufferedWriter(new FileWriter(file, true));
-                    for (Map.Entry<String, String> entry : translatorMap.entrySet()) {
-                        bf.write(entry.getKey() + " - " + entry.getValue());
-                        bf.newLine();
-                    }
-                    bf.flush();
-                } catch (IOException e) {
-                    System.out.println("BufferWriter block ERROR");
-                } finally {
-                    try {
-                        assert bf != null;
-                        bf.close();
-                    } catch (Exception e) {
-                        System.out.println("BufferWriter is not CLOSED");
-                    }
+                    assert bf != null;
+                    bf.close();
+                } catch (Exception e) {
+                    System.out.println("BufferWriter is not CLOSED");
                 }
+            }
 
-                System.out.println("Enter another translation (y/n)?");
-                String answer = scanner.nextLine();
+            System.out.println("Enter another translation (y/n)?");
+            String answer = scanner.nextLine();
 
-                switch (answer) {
-                    case "y":
-                    case "Y":
-                        continue;
-                    case "n":
-                    case "N":
-                        Menu.menu();
-                    default:
-                        Menu.menu();
-                }
-
+            switch (answer) {
+                case "y":
+                case "Y":
+                    continue;
+                case "n":
+                case "N":
+                    Menu.menu();
+                default:
+                    Menu.menu();
+            }
 
         }while (true) ;
     }

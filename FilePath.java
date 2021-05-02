@@ -21,5 +21,4 @@ public class FilePath {
         this.fileName = sc.nextLine();
     }
 }
-
 /* See tahab uuesti kirjutamist */

@@ -23,19 +23,19 @@ public class CreateNewFile {
         } catch (IOException e) {
             System.out.println("CreateNewFile file creator ERROR");
         }
-        System.out.println("Do you want continue (y/n)?");
+        System.out.println("Do you want create again (y/n)");
         String answer = scanner.nextLine();
 
         //j4tkamiseks vajalik valik
         switch (answer) {
             case "y":
             case "Y":
-                menu.menu();
-
+                createNewFile();
             case "n":
             case "N":
-                menu.newFile();
-
+                menu.menu();
+            default:
+                createNewFile();
         }
     }
 }

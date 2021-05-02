@@ -29,7 +29,7 @@ public class GetOne {
         //Toob yksikult k6ik v4lja
         System.out.print("\nEnter English word: ");
         String key = scanner.nextLine();
-            System.out.println(key + " - " + map.get(key));
+        System.out.println(key + " - " + map.get(key));
         reader.close();
 
         //j4tkamiseks vajalik valik
@@ -44,6 +44,6 @@ public class GetOne {
             case "N":
                 menu.menu();
         }
-        }
-
     }
+
+}
