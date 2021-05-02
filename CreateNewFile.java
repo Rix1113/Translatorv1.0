@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class CreateNewFile {
 
-
     public void createNewFile() throws IOException {
         Scanner scanner = new Scanner(System.in);
         Menu menu = new Menu();
