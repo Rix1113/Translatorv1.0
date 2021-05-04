@@ -1,11 +1,13 @@
 import java.io.File;
 import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class FileList {
 
     //Toob v4lja kaustas olevad failid
 
-    public void fileList() {
+    public void fileList() throws IOException {
 
 
         // try-catch block to handle exceptions
@@ -15,7 +17,7 @@ public class FileList {
             FilenameFilter filter = new FilenameFilter() {
                 @Override
                 public boolean accept(File f, String name) {
-                    // We want to find only .c files
+                    // What extension we want
                     return name.endsWith(".txt");
                 }
             };
@@ -31,5 +33,9 @@ public class FileList {
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+        System.out.println("------------------");
+
+
+
     }
 }

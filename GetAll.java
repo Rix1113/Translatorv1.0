@@ -3,12 +3,14 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class GetAll {
+
     public void getAllWords(String name) throws IOException {
         Scanner scanner = new Scanner(System.in);
         Menu menu = new Menu();
 
+
         //Siin on faili asukoht
-        String filePath = name;
+        String filePath = FileName.getUserInputFileName();
         HashMap<String, String> map = new HashMap<>();
 
         String line;
@@ -23,6 +25,7 @@ public class GetAll {
                 System.out.println("ignoring line: " + line);
             }
         }
+
         //Loop selle jaoks, et tooks k6ik failis olevad kirjed v4lja
         System.out.println();
         for (String key : map.keySet()) {
@@ -39,4 +42,6 @@ public class GetAll {
                 menu.menu();
         }
     }
+
+
 }

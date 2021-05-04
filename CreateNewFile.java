@@ -3,12 +3,11 @@ import java.io.IOException;
 
 public class CreateNewFile {
 
-    public void createNewFile(String name) throws IOException {
-        Menu menu = new Menu();
+    public void createNewFile() throws IOException {
 
         //Siin on faili asukoht
-
-        File file = new File(name);
+        FileName fileName = new FileName();
+        File file = new File(FileName.getUserInputFileName());
         boolean result;
 
         try {
@@ -21,7 +20,7 @@ public class CreateNewFile {
         } catch (IOException e) {
             System.out.println("CreateNewFile file creator ERROR");
         }
-        menu.menu();
+        Menu.menu();
     }
 }
 

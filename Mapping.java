@@ -5,14 +5,12 @@ import java.io.IOException;
 import java.util.*;
 
 public class Mapping {
-    static String outputFilePath = "Text.txt";
+//    static String outputFilePath = "Text.txt";
 
     public static void mapping() throws IOException {
 
         HashMap<String, String> translatorMap = new HashMap<>();
         Scanner scanner = new Scanner(System.in);
-
-//        Menu menu = new Menu();
 
         do {
             System.out.println("Enter the English word: ");
@@ -25,7 +23,7 @@ public class Mapping {
             String oldVal = translatorMap.put(eng, est);
 
 
-            File file = new File(outputFilePath);
+            File file = new File(FileName.getUserInputFileName());
 
             BufferedWriter bf = null;
 

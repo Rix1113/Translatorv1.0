@@ -4,13 +4,8 @@ import java.util.Scanner;
 public class Menu {
 
     static Scanner sc = new Scanner(System.in);
-
     static GetAll oW = new GetAll();
     static GetOne gA = new GetOne();
-    static Main main = new Main();
-
-    //Siin on eelvalik, kas tahad uut faili teha v6i mitte
-
 
 
     //P6himenyy

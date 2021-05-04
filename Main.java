@@ -7,7 +7,6 @@ public class Main {
 
             Scanner sc = new Scanner(System.in);
             CreateNewFile createNewFile = new CreateNewFile();
-            Menu menu = new Menu();
             String userInputPathName = null;
 
 
@@ -18,18 +17,22 @@ public class Main {
             switch (answer) {
                 case "y":
                 case "Y":
-                    System.out.println("Choose file name (Filename.txt)");
-                    userInputPathName = sc.nextLine();
-                    FilePath filePath = new FilePath(userInputPathName);
-                    filePath.getUserInputPathName();
+                    createNewFile.createNewFile();
+//                    FileName fileName = new FileName();
+                    Menu.menu();
 
-                    createNewFile.createNewFile(userInputPathName);
+
+
+                    /* SIIN OLEN POOLELI */
+                    //vaja saada selliselt, et siin valitud faili nimi l'heks k6igile
+
+
 
                 case "n":
                 case "N":
                     FileChoose.fileChoose();
                 default:
-                    createNewFile.createNewFile(userInputPathName);
+                    createNewFile.createNewFile();
             }
         }
     }

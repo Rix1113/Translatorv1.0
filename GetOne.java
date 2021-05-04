@@ -5,13 +5,14 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class GetOne {
+
+
     public void getOne() throws IOException {
 
         Scanner scanner = new Scanner(System.in);
-        Menu menu = new Menu();
 
         //Faili asukoht
-        String filePath = "Text.txt";
+        String filePath = FileName.getUserInputFileName();
         HashMap<String, String> map = new HashMap<>();
 
         String line;
@@ -42,6 +43,7 @@ public class GetOne {
                 getOne();
             case "n":
             case "N":
+                Menu menu = new Menu();
                 menu.menu();
         }
     }
