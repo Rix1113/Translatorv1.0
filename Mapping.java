@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.util.*;
 
 public class Mapping {
-//    static String outputFilePath = "Text.txt";
-
     public static void mapping() throws IOException {
 
         HashMap<String, String> translatorMap = new HashMap<>();
@@ -21,7 +19,6 @@ public class Mapping {
 
 
             String oldVal = translatorMap.put(eng, est);
-
 
             File file = new File(FileName.getUserInputFileName());
 
@@ -56,9 +53,6 @@ public class Mapping {
                 case "y":
                 case "Y":
                     continue;
-                case "n":
-                case "N":
-                    Menu.menu();
                 default:
                     Menu.menu();
             }

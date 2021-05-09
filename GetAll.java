@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class GetAll {
 
-    public void getAllWords(String name) throws IOException {
+    public void getAllWords() throws IOException {
         Scanner scanner = new Scanner(System.in);
-        Menu menu = new Menu();
 
 
         //Siin on faili asukoht
@@ -33,14 +32,11 @@ public class GetAll {
         }
         reader.close();
 
-// j4tkamiseks vajalik tegevus
+// jätkamiseks vajalik tegevus
         System.out.println("\nReturn main menu (press any key)");
         String answer = scanner.nextLine();
 
-        switch (answer) {
-            default:
-                menu.menu();
-        }
+        Menu.menu();
     }
 
 

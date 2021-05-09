@@ -6,7 +6,7 @@ public class CreateNewFile {
     public void createNewFile() throws IOException {
 
         //Siin on faili asukoht
-        FileName fileName = new FileName();
+        new FileName();
         File file = new File(FileName.getUserInputFileName());
         boolean result;
 

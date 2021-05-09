@@ -8,7 +8,7 @@ public class Menu {
     static GetOne gA = new GetOne();
 
 
-    //P6himenyy
+    //Põhimenüü
     public static void menu() throws IOException {
 
         System.out.println("\n***************************" +
@@ -23,17 +23,22 @@ public class Menu {
 
         String ans = sc.nextLine();
 
-        if (ans.equals("1")) {
-            Mapping.mapping();
-        } else if (ans.equals("2")) {
-            gA.getOne();
-        } else if (ans.equals("3")) {
-            oW.getAllWords("name");
-        } else if (ans.equals("4")) {
-            System.out.println("Closing program");
-            System.exit(0);
-        } else {
-            menu();
+        switch (ans) {
+            case "1":
+                Mapping.mapping();
+                break;
+            case "2":
+                gA.getOne();
+                break;
+            case "3":
+                oW.getAllWords();
+                break;
+            case "4":
+                System.out.println("Closing program");
+                System.exit(0);
+            default:
+                menu();
+                break;
         }
     }
 }

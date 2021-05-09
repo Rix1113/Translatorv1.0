@@ -27,13 +27,13 @@ public class GetOne {
                 System.out.println("ignoring line: " + line);
             }
         }
-        //Toob yksikult k6ik v4lja
+        //Toob üksikult k6ik v4lja
         System.out.print("\nEnter English word: ");
         String key = scanner.nextLine();
         System.out.println(key + " - " + map.get(key));
         reader.close();
 
-        //j4tkamiseks vajalik valik
+        //jätkamiseks vajalik valik
         System.out.println("\nAre you want continue (y/n)?");
         String answer = scanner.nextLine();
 
@@ -43,8 +43,7 @@ public class GetOne {
                 getOne();
             case "n":
             case "N":
-                Menu menu = new Menu();
-                menu.menu();
+                Menu.menu();
         }
     }
 
